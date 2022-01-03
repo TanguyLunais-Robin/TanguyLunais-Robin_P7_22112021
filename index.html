@@ -16,36 +16,84 @@
 				src="https://res.cloudinary.com/dlpyn3wxf/image/upload/v1619049061/logo-les-petits-plats_jagbwd.png"
 				alt="Les petits plats"
 			/>
+
+			<!-- Barre de recherche -->
+			<form id="searchBar">
+				<label for="searchBarInput"></label>
+				<input
+					type="search"
+					id="searchBarInput"
+					placeholder="Rechercher un ingrédient, appareil, ustensile ou une recette"
+					aria-label="Search through site content"
+				/>
+				<i class="fas fa-search"></i>
+			</form>
+
+			<!-- Badges ajoutés dynamiquement -->
+			<nav id="tagsBadges">
+				<span id="ingredientTag"></span>
+				<span id="appareilTag"></span>
+				<span id="ustensileTag"></span>
+			</nav>
+			<!-- Filtres -->
+			<div id="filter">
+				<div id="ingredients">
+					<button>
+						Ingrédients <i class="fas fa-chevron-down" id="openIngredientsFilter"></i>
+					</button>
+					<div id="hiddenIngredientsFilter">
+						<label for="inputIngredients"></label>
+						<input
+							type="search"
+							id="inputIngredients"
+							aria-label="Search through ingredients"
+							placeholder="Rechercher un ingrédient"
+						/>
+						<i class="fas fa-chevron-up" id="closeIngredientsFilter"></i>
+						<div id="ingredientsExample"></div>
+					</div>
+				</div>
+				<div id="appareil">
+					<button>
+						Appareil <i class="fas fa-chevron-down" id="openAppareilFilter"></i>
+					</button>
+					<div id="hiddenAppareilFilter">
+						<label for="inputAppareil"></label>
+						<input
+							type="search"
+							id="inputAppareil"
+							aria-label="Search through appareil"
+							placeholder="Rechercher un appareil"
+						/>
+						<i class="fas fa-chevron-up" id="closeAppareilFilter"></i>
+						<div id="appareilExample"></div>
+					</div>
+				</div>
+
+				<div id="ustensiles">
+					<button>
+						Ustensiles <i class="fas fa-chevron-down" id="openUstensilesFilter"></i>
+					</button>
+					<div id="hiddenUstensilesFilter">
+						<label for="inputUstensiles"></label>
+						<input
+							type="search"
+							id="inputUstensiles"
+							aria-label="Search through ustensiles"
+							placeholder="Rechercher un ustensile"
+						/>
+						<i class="fas fa-chevron-up" id="closeUstensilesFilter"></i>
+						<div id="ustensilesExample"></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Affichage dynamique -->
+			<aside id="resultMessage">
+				<span>Aucun résultat</span>
+				<i class="far fa-times-circle"></i>
+			</aside>
 		</header>
-		<!-- Barre de recherche -->
-		<form id="searchBar">
-			<label for="searchBarInput"></label>
-			<input
-				type="search"
-				id="searchBarInput"
-				placeholder="Rechercher un ingrédient, appareil, ustensile ou une recette"
-				aria-label="Search through site content"
-			/>
-			<i class="fas fa-search"></i>
-		</form>
-		<!-- Filtres -->
-		<div id="filter">
-			<div id="ingredients">
-				<button>
-					Ingrédients <i class="fas fa-chevron-down" id="openIngredientsFilter"></i>
-				</button>
-			</div>
-			<div id="appareil">
-				<button>
-					Appareil <i class="fas fa-chevron-down" id="openAppareilFilter"></i>
-				</button>
-			</div>
-			<div id="ustensiles">
-				<button>
-					Ustensiles <i class="fas fa-chevron-down" id="openUstensilesFilter"></i>
-				</button>
-			</div>
-		</div>
 		<!-- Recettes-->
 		<main id="mainContent"></main>
 		<script src="./js/API/recipesData.js"></script>

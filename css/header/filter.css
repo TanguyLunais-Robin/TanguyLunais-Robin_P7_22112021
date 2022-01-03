@@ -1,3 +1,41 @@
+.listUlApp > li:hover {
+	background-color: #ffff;
+	color: #68d9a4;
+}
+
+#ingredients > button:hover {
+	background-color: #0751bc;
+}
+
+#ingredientTag > i:hover {
+	color: #0751bc;
+}
+
+#appareil > button:hover {
+	background-color: #2caf72;
+}
+
+#appareilTag > i:hover {
+	color: #2caf72;
+}
+
+#ustensiles > button:hover {
+	background-color: #dd2c17;
+}
+
+#ustensileTag > i:hover {
+	color: #dd2c17;
+}
+
+#closeIngredientsFilter,
+#closeAppareilFilter,
+#closeUstensilesFilter {
+	font-size: 1.125rem;
+	left: 32rem;
+	position: absolute;
+	top: 1.8rem;
+}
+
 #filter {
 	display: flex;
 	flex-direction: column;
@@ -6,6 +44,18 @@
 	margin: 1rem auto;
 	padding: 0;
 	width: 95%;
+}
+
+#hiddenIngredientsFilter,
+#hiddenAppareilFilter,
+#hiddenUstensilesFilter {
+	border-radius: 5px;
+	color: #ffff;
+	display: none;
+	position: absolute;
+	top: 16.2rem;
+	width: 35rem;
+	z-index: 10;
 }
 
 #ingredients > button,
@@ -26,19 +76,104 @@
 	width: 11rem;
 }
 
+.listUlIng,
+.listUlApp,
+.listUlUst {
+	display: flex;
+	flex-wrap: wrap;
+	height: fit-content;
+	justify-content: space-evenly;
+	list-style: none;
+	padding: 0.5rem;
+}
+
+.listUlIng > li,
+.listUlApp > li,
+.listUlUst > li {
+	font-size: 1.21rem;
+	overflow: hidden;
+	padding: 0.5rem 1rem;
+	text-align: start;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 9rem;
+}
+
+.listUlIng > li.list-ingredients.selected,
+.listUlApp > li.list-appareil.selected,
+.listUlUst > li.list-ustensiles.selected {
+	background-color: #000;
+}
+
+.listUlIng > li:hover {
+	background-color: #ffff;
+	color: #3282f7;
+}
+
+#inputIngredients,
+#inputAppareil,
+#inputUstensiles {
+	border: none;
+	border-radius: 5px;
+	color: #ffff;
+	font-family: Lato;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	height: 4.3125rem;
+	outline: none;
+	padding: 2rem;
+	width: 100%;
+}
+
+#tagsBadges {
+	display: flex;
+	justify-content: flex-start;
+	margin-left: 2.5rem;
+}
+
+#tagsBadges > #appareilTag,
+#hiddenAppareilFilter,
 #appareil > button,
 #inputAppareil {
 	background-color: #68d9a4;
 }
 
+#tagsBadges > #ingredientTag,
+#hiddenIngredientsFilter,
 #ingredients > button,
 #inputIngredients {
 	background-color: #3282f7;
 }
 
+#tagsBadges > #ustensileTag,
+#hiddenUstensilesFilter,
 #ustensiles > button,
 #inputUstensiles {
 	background-color: #ed6454;
+}
+
+#tagsBadges > span {
+	align-items: center;
+	border-radius: 0.25rem;
+	color: #fff;
+	cursor: default;
+	display: none;
+	justify-content: space-between;
+	margin: 0.5rem 1rem 0.25rem 0;
+	padding: 0.5rem 1rem;
+	width: fit-content;
+}
+
+#ingredientTag > i,
+#appareilTag > i,
+#ustensileTag > i {
+	margin-left: 0.5rem;
+}
+
+.listUlUst > li:hover {
+	background-color: #ffff;
+	color: #ed6454;
 }
 
 @media screen and (min-width: 900px) {
