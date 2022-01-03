@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Les petis plats</title>
+		<link rel="icon" type="image/png" href="./images/logo_plats.png" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<!-- En tete-->
+		<header>
+			<img
+				src="https://res.cloudinary.com/dlpyn3wxf/image/upload/v1619049061/logo-les-petits-plats_jagbwd.png"
+				alt="Les petits plats"
+			/>
+		</header>
+		<!-- Barre de recherche -->
+		<form id="searchBar">
+			<label for="searchBarInput"></label>
+			<input
+				type="search"
+				id="searchBarInput"
+				placeholder="Rechercher un ingrédient, appareil, ustensile ou une recette"
+				aria-label="Search through site content"
+			/>
+			<i class="fas fa-search"></i>
+		</form>
+		<!-- Filtres -->
+		<div id="filter">
+			<div id="ingredients">
+				<button>
+					Ingrédients <i class="fas fa-chevron-down" id="openIngredientsFilter"></i>
+				</button>
+			</div>
+			<div id="appareil">
+				<button>
+					Appareil <i class="fas fa-chevron-down" id="openAppareilFilter"></i>
+				</button>
+			</div>
+			<div id="ustensiles">
+				<button>
+					Ustensiles <i class="fas fa-chevron-down" id="openUstensilesFilter"></i>
+				</button>
+			</div>
+		</div>
+		<!-- Recettes-->
+		<main id="mainContent"></main>
+		<script src="./js/API/recipesData.js"></script>
+		<script type="module" src="./js/main.js"></script>
+	</body>
+</html>

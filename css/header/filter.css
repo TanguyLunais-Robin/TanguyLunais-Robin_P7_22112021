@@ -1,0 +1,54 @@
+#filter {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin: 1rem auto;
+	padding: 0;
+	width: 95%;
+}
+
+#ingredients > button,
+#appareil > button,
+#ustensiles > button {
+	align-items: center;
+	border: none;
+	border-radius: 0.3125rem;
+	color: #ffff;
+	cursor: pointer;
+	display: flex;
+	font-size: 1.125rem;
+	height: 4.3125rem;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	transition: linear 0.3s;
+	width: 11rem;
+}
+
+#appareil > button,
+#inputAppareil {
+	background-color: #68d9a4;
+}
+
+#ingredients > button,
+#inputIngredients {
+	background-color: #3282f7;
+}
+
+#ustensiles > button,
+#inputUstensiles {
+	background-color: #ed6454;
+}
+
+@media screen and (min-width: 900px) {
+	#filter {
+		flex-direction: row;
+	}
+
+	#ingredients > button,
+	#appareil > button,
+	#ustensiles > button {
+		margin-right: 2rem;
+	}
+}
