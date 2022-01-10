@@ -6,24 +6,19 @@ import Data from "../utilities/Data.js";
 export default class Search {
 	static searchMainInput(value) {
 		let recipesMatched = [];
-		for (let i = 0; i < recipes.length; i++) {
-			const { name, ingredients, description } = recipes[i];
-			const includesInName = Utils.normalizeText(name).includes(Utils.normalizeText(value));
-			const includesInDescription = Utils.normalizeText(description).includes(
-				Utils.normalizeText(value)
-			);
-			let includesInIngredients = false;
-			for (let y = 0; y < ingredients.length; y++) {
-				if (Utils.normalizeText(ingredients[y].ingredient).includes(value)) {
-					includesInIngredients = true;
-				}
+		recipes.filter((recipe) => {
+			if (
+				Utils.normalizeText(recipe.name).includes(Utils.normalizeText(value)) ||
+				Utils.normalizeText(recipe.description).includes(Utils.normalizeText(value)) ||
+				recipe.ingredients.some((elt) =>
+					Utils.normalizeText(elt.ingredient).includes(value)
+				)
+			) {
+				recipesMatched.push(recipe);
 			}
-			if (includesInName || includesInDescription || includesInIngredients) {
-				recipesMatched.push(recipes[i]);
-			}
-		}
+		});
 		return {
-			recipesMatched,
+			recipesMatched: recipesMatched,
 			ingredients: Data.getAllIngredients(recipesMatched),
 			appliances: Data.getAllAppliances(recipesMatched),
 			ustensils: Data.getAllUstensils(recipesMatched),
