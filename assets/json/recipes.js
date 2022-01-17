@@ -20,7 +20,7 @@ const recipes = [
 			},
 			{
 				ingredient: "Sucre",
-				quantite: 30,
+				quantity: 30,
 				unit: "grammes",
 			},
 			{
@@ -28,8 +28,7 @@ const recipes = [
 			},
 		],
 		time: 10,
-		description:
-			"Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée",
+		description: "Mettre les glaçons à votre goût dans le blender, ajouter le lait, la crème de coco, le jus de 2 citrons et le sucre. Mixer jusqu'à avoir la consistence désirée",
 		appliance: "Blender",
 		ustensils: ["cuillère à Soupe", "verres", "presse citron"],
 	},
@@ -53,7 +52,7 @@ const recipes = [
 			},
 			{
 				ingredient: "Carotte",
-				quantite: 1,
+				quantity: 1,
 			},
 			{
 				ingredient: "Citron Vert",
@@ -262,7 +261,7 @@ const recipes = [
 		description:
 			"Etaler la pate dans les moules à tartelette. Faire cuire la pate 30 minutes. Découper le chocolat en morceau et le faire chauffer, y ajouter la crême liquide, ajouter le beurre et remuer jusqu'à avoir une pâte homogène. Verser la pate sur les tartelettes. Couper les fraises en 2 et les positionner sur ",
 		appliance: "Four",
-		ustensils: ["moule à tartelettes (6)", "casserolle"],
+		ustensils: ["moule à tartelettes (6)", "Casserole"],
 	},
 	{
 		id: 8,
@@ -303,7 +302,7 @@ const recipes = [
 		description:
 			"Hachez les noix grossièrement. Faire fondre le chocolat avec le beurre. Mélanger les oeuf et le sucre et mélanger au chocolat. Ajouter la farine. Mélanger afin d'avoir quelque chose d'homogène puis incorporer les noix. Verser la préparation dans un moule de préférence rectangulaire. Cuire 2O à 25 minutes à 180°. Sortez du four et attendez quelques minutes pour démouler. Servir avec une boule de glace pour plus de gourmandise.",
 		appliance: "Four",
-		ustensils: ["moule à gateaux", "casserolle"],
+		ustensils: ["moule à gateaux", "Casserole"],
 	},
 	{
 		id: 9,
@@ -440,8 +439,7 @@ const recipes = [
 			},
 		],
 		time: 40,
-		description:
-			"Éplucher les fruits et les couper en morceaux, les mettre dans une casserolle en ajoutant l'eau et le sucre vanillé. Laisser cuire 15 minutes en remuant régulièrement.",
+		description: "Éplucher les fruits et les couper en morceaux, les mettre dans une Casserole en ajoutant l'eau et le sucre vanillé. Laisser cuire 15 minutes en remuant régulièrement.",
 		appliance: "Casserole",
 		ustensils: ["couteau", "économe"],
 	},
@@ -685,8 +683,7 @@ const recipes = [
 			},
 		],
 		time: 0,
-		description:
-			"Coupez les fruits en morceaux, ajouter le jus de citron et le lait ainsi que le sucre glace. Mixez. Ajoutez des glaçons si le lait n'a pas été mis au frais.",
+		description: "Coupez les fruits en morceaux, ajouter le jus de citron et le lait ainsi que le sucre glace. Mixez. Ajoutez des glaçons si le lait n'a pas été mis au frais.",
 		appliance: "Blender",
 		ustensils: ["couteau", "verres", "presse citron"],
 	},
@@ -765,7 +762,7 @@ const recipes = [
 		time: 30,
 		description:
 			"Cuisiner la viande hachée dans une poelle à frire. Dans une autre faire cuire les oignons découpés en fins dés avec un peu de beurre. Ajouter du vin rouge. Mélanger les oigons avec la viande hachée. Faire cuire les pates le temps indiqué sur le paquet. Ajouter le coulis de tomates à la viande hachée. Une fois que les pates sont cuites, ajouter la crème fraiche à la viande hachée. Serivir.",
-		appliance: "Casserolle.",
+		appliance: "Casserole",
 		ustensils: ["Cuillère en bois", "louche", "couteau"],
 	},
 	{
@@ -802,7 +799,7 @@ const recipes = [
 		description:
 			"Faire fondre le chocolat et le beurre au bain marie. Dans un saladier battre les oeufs avec le sucre jusqu'à obtenir une texture de type mousse. Ajouter la farine ainsi que le mélange de beurre et chocolat fondu. Beurrez le moule à gateaux. Mettre au four préchauffé à 200° puis faites chauffer pendant 15 minutes. C'est prêt. Servir avec une boule de glace ou une crême dessert.",
 		appliance: "Four",
-		ustensils: ["moule à gateaux", "fouet", "casserolle"],
+		ustensils: ["moule à gateaux", "fouet", "Casserole"],
 	},
 	{
 		id: 23,
@@ -880,8 +877,7 @@ const recipes = [
 			},
 		],
 		time: 40,
-		description:
-			"Découper le concombre et les tomates en dés, les mettre dans un saladier avec le mais et les miettes de poisson, ajouter les pates. Ajouter la mayonnaise. Mélanger le tout et servir frais.",
+		description: "Découper le concombre et les tomates en dés, les mettre dans un saladier avec le mais et les miettes de poisson, ajouter les pates. Ajouter la mayonnaise. Mélanger le tout et servir frais.",
 		appliance: "Saladier",
 		ustensils: ["couteau", "cuillère en bois"],
 	},
@@ -948,8 +944,7 @@ const recipes = [
 			},
 		],
 		time: 25,
-		description:
-			"Verser de l'huile dans une cocotte minute couper les légumes et les verser dans l'huile chaude. Laisser cuire et remuer pendant 10 minutes. Passer aux mixer. Servir.",
+		description: "Verser de l'huile dans une cocotte minute couper les légumes et les verser dans l'huile chaude. Laisser cuire et remuer pendant 10 minutes. Passer aux mixer. Servir.",
 		appliance: "Mixer",
 		ustensils: ["cocotte minute", "couteau"],
 	},
@@ -985,7 +980,7 @@ const recipes = [
 		time: 15,
 		description:
 			"Faire fondre l'oseille avec du beurre demi sel, ajouter un litre d'eau. Ajouter les vermicelles. Laisser cuire. une foit prêt, sortir du feu et après 5 minutes ajouter le jaune d'oeuf et la crême fraîche",
-		appliance: "Casserolle",
+		appliance: "Casserole",
 		ustensils: ["couteau", "cuillère en bois"],
 	},
 	{
@@ -1022,7 +1017,7 @@ const recipes = [
 		description:
 			"Emincer les blanc de poireaux et les faire chauffer dans 25 grammes de beurre. AJouter les pommes de terres coupées en morceaux. Ajouter l'eau et laisser mijoter pour 45 minutes. Chauffer l'oseille avec le beurre restant puis incorporer le tout. Mixez. Ajoutez la crème. Bon appetit.",
 		appliance: "Mixer",
-		ustensils: ["casserolle", "couteau"],
+		ustensils: ["Casserole", "couteau"],
 	},
 	{
 		id: 29,
@@ -1051,8 +1046,7 @@ const recipes = [
 			},
 		],
 		time: 30,
-		description:
-			"Prendre les pois chiches, les mettre dans le mixer avec de l'huile d'olive, ajouter le jus des 2 citrons et du paprika selon le gout.",
+		description: "Prendre les pois chiches, les mettre dans le mixer avec de l'huile d'olive, ajouter le jus des 2 citrons et du paprika selon le gout.",
 		appliance: "Mixer",
 		ustensils: ["cuillère en bois", "presse citron"],
 	},
@@ -1077,10 +1071,9 @@ const recipes = [
 			},
 		],
 		time: 60,
-		description:
-			"Mettre tous les ingrédients dans une cocotte. ajouter de l'eau pour recouvrir l'ensemble et laisser cuirre à petit feur pour 1 heure. Passer au mixer. Salez, poivrez. C'est prêt",
+		description: "Mettre tous les ingrédients dans une cocotte. ajouter de l'eau pour recouvrir l'ensemble et laisser cuirre à petit feur pour 1 heure. Passer au mixer. Salez, poivrez. C'est prêt",
 		appliance: "Mixer",
-		ustensils: ["casserolle", "cuillère en bois"],
+		ustensils: ["Casserole", "cuillère en bois"],
 	},
 	{
 		id: 31,
@@ -1220,7 +1213,7 @@ const recipes = [
 		],
 		time: 25,
 		description:
-			"Eplucher les patates douces et coupez les en morceaux. Les faire cuire durant 20 minute dans une casserolle d'eau bouillante. Passer au mixer en ajoutant la crème et l'huile d'olive à son gout. Salez, poivrez. Pressez l'orange et ajouter le jus à l'ensemble. Servir.",
+			"Eplucher les patates douces et coupez les en morceaux. Les faire cuire durant 20 minute dans une Casserole d'eau bouillante. Passer au mixer en ajoutant la crème et l'huile d'olive à son gout. Salez, poivrez. Pressez l'orange et ajouter le jus à l'ensemble. Servir.",
 		appliance: "Mixer",
 		ustensils: ["couteau", "économe", "cuillère en bois"],
 	},
@@ -1259,8 +1252,7 @@ const recipes = [
 			},
 		],
 		time: 25,
-		description:
-			"Éplucher les légumes, les couper en morceaux et les mettre à cuire dans une cocotte minute environ 15 minutes. Mixer en ajoutant le beurre, la crème. Ajouter le cumun et la noix de muscade.",
+		description: "Éplucher les légumes, les couper en morceaux et les mettre à cuire dans une cocotte minute environ 15 minutes. Mixer en ajoutant le beurre, la crème. Ajouter le cumun et la noix de muscade.",
 		appliance: "Mixer",
 		ustensils: ["cocotte minute", "couteau", "cuillère en bois"],
 	},
@@ -1370,8 +1362,7 @@ const recipes = [
 			},
 		],
 		time: 20,
-		description:
-			"Fouettez les oeufs, le sucre et le lait. tremper les tranches de pain. Le cuire au four pendant environ 10 minutes à 180°. Servir",
+		description: "Fouettez les oeufs, le sucre et le lait. tremper les tranches de pain. Le cuire au four pendant environ 10 minutes à 180°. Servir",
 		appliance: "Four",
 		ustensils: ["fouet", "bol", "Cuillère à Soupe"],
 	},
@@ -1432,8 +1423,7 @@ const recipes = [
 			},
 		],
 		time: 10,
-		description:
-			"Dans un saladier mettre l'eau, le jus des cirtons et le sucre. Bien mélanger. Ajouter le bicarbonate. Servir. Ajouter des glaçon et une feuille de menthe pour la déco.",
+		description: "Dans un saladier mettre l'eau, le jus des cirtons et le sucre. Bien mélanger. Ajouter le bicarbonate. Servir. Ajouter des glaçon et une feuille de menthe pour la déco.",
 		appliance: "Saladier",
 		ustensils: ["cuillère en bois"],
 	},
@@ -1460,7 +1450,7 @@ const recipes = [
 		time: 20,
 		description:
 			"Séparer les blancs d'oeufs. Faire fondre le chocolat au bain marie. Ajouter les jaunes et le sucre au chocolat hors du feu. Battre les blancs en neige. Ajouter les blancs au mélange de chocolat. Mélangez délicatement avec une spatule. Servir dans un plat ou dans des verres. Mettre au frais",
-		appliance: "Casserolle",
+		appliance: "Casserole",
 		ustensils: ["fouet", "spatule", "verres"],
 	},
 	{
@@ -1561,7 +1551,7 @@ const recipes = [
 		time: 15,
 		description:
 			"Mélanger la farine et le beurre fondu en ajoutant le lait peu à peu. Ajouter du sucre après la cuisson. Bien mélanger. Ajouter le chocolat en morceaux et laisser chauffer 8 minutes en mélangeant avec une cuillère en bois. Mettre dans des verres",
-		appliance: "Casserolle",
+		appliance: "Casserole",
 		ustensils: ["cuillère en bois"],
 	},
 	{
@@ -1592,7 +1582,7 @@ const recipes = [
 		time: 30,
 		description:
 			"Faire bouillir le lait ( on peut y ajouter de l'essence de vanille. Battre les oeufs et le sucre, ajouter la farine puis finalement ajouter le lait chaud. Remettre à feu doux pour faire épaissir en remuant pendant 5 à 10 minutes.",
-		appliance: "Casserolle",
+		appliance: "Casserole",
 		ustensils: ["fouet", "saladier"],
 	},
 	{
@@ -1663,8 +1653,7 @@ const recipes = [
 			},
 		],
 		time: 5,
-		description:
-			"Mélanger le jus de citron avec le sucre et la mascarpone. Ajouter la crème fraiche. Mélanger le tout et mettre au congélateur pendant 1 heure. Servir",
+		description: "Mélanger le jus de citron avec le sucre et la mascarpone. Ajouter la crème fraiche. Mélanger le tout et mettre au congélateur pendant 1 heure. Servir",
 		appliance: "Saladier",
 		ustensils: ["fouet", "verres", "cuillère en bois"],
 	},
@@ -1699,8 +1688,7 @@ const recipes = [
 			},
 		],
 		time: 40,
-		description:
-			"Étaler la pate a pizza. Ecraser les tomates pelées, les étaler sur la pâte, ajouter les lardons et les champignons. Ajouter le gruyère eet passer au four à 220° durant 20 minutes",
+		description: "Étaler la pate a pizza. Ecraser les tomates pelées, les étaler sur la pâte, ajouter les lardons et les champignons. Ajouter le gruyère eet passer au four à 220° durant 20 minutes",
 		appliance: "Four",
 		ustensils: ["rouleau à patisserie", "râpe à fromage", "couteau"],
 	},
@@ -1733,8 +1721,7 @@ const recipes = [
 			},
 		],
 		time: 0,
-		description:
-			"Découper les fruits. Le passer au blender jusqu'à obtenir une texture liquide. Mettre au frais. Servir",
+		description: "Découper les fruits. Le passer au blender jusqu'à obtenir une texture liquide. Mettre au frais. Servir",
 		appliance: "Blender",
 		ustensils: ["couteau", "verres"],
 	},
