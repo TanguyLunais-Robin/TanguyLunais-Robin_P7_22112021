@@ -1,4 +1,4 @@
-// Define RecipeCard class
+// Defini classe RecipeCard
 class RecipeCard {
 	constructor(recipe) {
 		this._recipe = recipe;
@@ -29,7 +29,7 @@ class RecipeCard {
 			cardIngredients = cardIngredients + ingredients;
 		}
 
-		// Render photographer card
+		// Rendu carte de recettes 
 		const recipeCard = `
         <div class="card h-100">
             <div class="card-img-top"></div>

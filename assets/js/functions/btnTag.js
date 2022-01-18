@@ -1,4 +1,4 @@
-// Function to expand, hide title and disable dropdown button & show and focus searchInput
+//Fonction pour étendre, masquer le titre et désactiver le bouton déroulant et afficher et centrer la rechercheInput
 const btnTagOpen = (btnTag, form, btnTagOpenClass, searchInput) => {
 	const btnTitle = btnTag.getElementsByClassName("btn-tag-title");
 
@@ -9,7 +9,7 @@ const btnTagOpen = (btnTag, form, btnTagOpenClass, searchInput) => {
 
 	searchInput.focus();
 };
-// Function to reduce, show title and enable dropdown button & hide and reset searchInput
+// Fonction pour réduire, afficher le titre et activer le bouton déroulant et masquer et réinitialiser la rechercheInput
 const btnTagClose = (btnTag, form, btnTagOpenClass, searchInput, searchArray, searchArrayFiltered, renderListFunction, wrapper) => {
 	const btnTitle = btnTag.getElementsByClassName("btn-tag-title");
 

@@ -10,7 +10,7 @@ const mainSearch = (searchValue) => {
 };
 
 const searchbarValue = (e) => {
-	// If searchbar have 3 characters launch search with input else launch empty search
+	// Si la barre de recherche comporte trois caractères, lancez la recherche avec les données d’entrée, sinon lancez la recherche vide
 	if (e.target.value.length > 2) {
 		mainSearch(e.target.value);
 	} else {
