@@ -14,18 +14,18 @@ class Homepage {
 		ingredientsList = [];
 		appliancesList = [];
 		ustensilsList = [];
-		// Retrieving and generating the list of recipes - If array > 0 render recipes card else show message
+		// Récupération et génération de la liste des recettes - Si le tableau > 0 rend la carte des recettes sinon afficher le message
 		if (array.length > 0) {
 			array
 				.map((recipe) => new Recipe(recipe))
 				.forEach((recipe) => {
 					const template = new RecipeCard(recipe);
 					this.$recipesListWrapper.appendChild(template.createRecipeCard());
-					// Completing the ingredient array
+					// Boucle dans le tableau ingredients
 					for (let i = 0; i < template._recipe._ingredients.length; i++) {
-						// Check if the ingredient is not already in array
+						// Regarde si l'ingredient n'ai pas deja dans le tableau
 						if (ingredientsList.indexOf(template._recipe._ingredients[i].ingredient.toLowerCase()) === -1) {
-							// If the ingredient is not in the list, it is added in array
+							// Si l'ingredient n'ai pas dans le tableau on l'ajoute 
 							ingredientsList.push(template._recipe._ingredients[i].ingredient.toLowerCase());
 						}
 					}
