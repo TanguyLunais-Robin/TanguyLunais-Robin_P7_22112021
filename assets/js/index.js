@@ -23,22 +23,22 @@ class Homepage {
 					this.$recipesListWrapper.appendChild(template.createRecipeCard());
 					// Boucle dans le tableau ingredients
 					for (let i = 0; i < template._recipe._ingredients.length; i++) {
-						// Regarde si l'ingredient n'ai pas deja dans le tableau
+						// Regarde si l'ingredient n'est pas deja dans le tableau
 						if (ingredientsList.indexOf(template._recipe._ingredients[i].ingredient.toLowerCase()) === -1) {
-							// Si l'ingredient n'ai pas dans le tableau on l'ajoute 
+							// Si l'ingredient n'est pas dans le tableau on l'ajoute 
 							ingredientsList.push(template._recipe._ingredients[i].ingredient.toLowerCase());
 						}
 					}
-					// Completing the appliance array // Check if the appliance is not already in array
+					// Compléter le tableau des appareils // Vérifiez si l’appareil n’est pas déjà dans le tableau
 					if (appliancesList.indexOf(template._recipe._appliance.toLowerCase()) === -1) {
-						// If the appliance is not in the list, it is added in array
+						// Si l'appareil n'est pas dans la liste , il est ajouté au tableau
 						appliancesList.push(template._recipe._appliance.toLowerCase());
 					}
-					// Completing the ustensil array
+					// Boucle dans le tableau des ustensibles 
 					for (let i = 0; i < template._recipe._ustensils.length; i++) {
-						// Check if the ustensil is not already in array
+						// Regarde si l'ustensible n'est pas deja dans le tableau
 						if (ustensilsList.indexOf(template._recipe._ustensils[i].toLowerCase()) === -1) {
-							// If the ustensil is not in the list, it is added in array
+							// Si l'ustensible n'est pas dans le tableau on l'ajoute 
 							ustensilsList.push(template._recipe._ustensils[i].toLowerCase());
 						}
 					}
@@ -49,11 +49,11 @@ class Homepage {
 	}
 	// Render tags list function
 	async renderList(wrapper, array, tagType) {
-		// Removes the elements already present in the dropdowns
+		// Supprime les éléments déjà présents dans le dropdown 
 		while (wrapper.firstChild) {
 			wrapper.removeChild(wrapper.lastChild);
 		}
-		// Add the first 30 items to each dropdown - If array > 0 render tags else show message
+		// Ajoute les 30 premiers items a chaque dropdown - Si le resultat > 0 montrer le rendu , sinon montrer message 
 		if (array.length > 0) {
 			wrapper.classList.remove("one-column");
 			for (let i = 0; i < 30; i++) {
@@ -67,36 +67,36 @@ class Homepage {
 			wrapper.innerHTML += `<li class="text-white px-3"> Aucun tag ne correspond à votre recherche...</li>`;
 		}
 	}
-	// Generate the tags in the ingredient dropdown
+	// Générer tags dropdown des ingrédients
 	async renderIngredientsList(array, wrapper = this.$ingredientsListWrapper) {
 		homepage.renderList(wrapper, array, "ingredient");
 		homepage.tags("btn-tag-ingredient", "bg-primary", ingredientsTagActivated);
 	}
-	// Generate the tags in the appliance dropdown
+	// Générer tags dropdown des appareils
 	async renderAppliancesList(array, wrapper = this.$appliancesListWrapper) {
 		homepage.renderList(wrapper, array, "appliance");
 		homepage.tags("btn-tag-appliance", "bg-success", appliancesTagActivated);
 	}
-	// Generate the tags in the ustensil dropdown
+	// Générer tags dropdown des ustensibles
 	async renderUstensilsList(array, wrapper = this.$ustensilsListWrapper) {
 		homepage.renderList(wrapper, array, "ustensil");
 		homepage.tags("btn-tag-ustensil", "bg-danger", ustensilsTagActivated);
 	}
-	// Manage the addition of a tag to the search
+	// Gérer l’ajout d’un tag à la recherche
 	async tags(className, backgroundColor, tagsArrayList) {
 		// DOM of tags via className
 		const tags = document.getElementsByClassName(className);
-		// Check if the tag exists
+		// Regarder si le tag existe 
 		if (tags != undefined) {
 			for (let i = 0; i < tags.length; i++) {
-				// Add a tag to the search for recipes when clicking in the dropdown
+				// AJouter tag a la recherche des recettes quand on clique dans le dropdown
 				tags[i].addEventListener("click", function () {
 					const tagsContainer = document.getElementById("tags-container");
 					const newTags = document.getElementById(tags[i].value);
 					if (newTags === undefined || newTags === null) {
-						// Check if the tag is not already activated
+						// Verifier si le tag n'est pas deja activer 
 						if (tagsArrayList.indexOf(tags[i].value) === -1) {
-							// Generate the HTML of the tag
+							// Generer HTML du tag 
 							tagsContainer.innerHTML += `
 							<div id="${tags[i].value.split(" ").join("-")}" class="tags badge tag-${tags[i].value.split(" ").join("-")} ${backgroundColor} ps-3 pe-2 py-2 me-3 mb-2 rounded">
 								<span>${tags[i].value.charAt(0).toUpperCase() + tags[i].value.slice(1)}</span>
@@ -104,9 +104,9 @@ class Homepage {
 									<img src="./assets/img/tag-close.svg" alt="" aria-hidden="true">
 								</button>
 							</div>`;
-							// Add the tag to the activated tag array
+							// Ajoute le tag , au tag deja activer dans le tableau
 							tagsArrayList.push(tags[i].value);
-							// Starts the search for recipes using tags
+							// Lancer la recherche des recettes qui utilise le tag 
 							searchByTags();
 
 							homepage.removeTags();
@@ -116,20 +116,20 @@ class Homepage {
 			}
 		}
 	}
-	// Manage the deletion of a tag in search of recipes
+	// Gérer la suppression d’un tag à la recherche de recettes
 	async removeTags() {
 		const closeTag = (tagsArrayList) => {
 			for (let i = 0; i < tagsArrayList.length; i++) {
 				const tag = document.getElementById(tagsArrayList[i].split(" ").join("-"));
 				const btnTag = document.getElementById("btn-close-" + tagsArrayList[i].split(" ").join("-"));
-				// Remove the search tag by clicking on the cross
+				// Retire la recherche tag en cliquant sur la croix 
 				btnTag.addEventListener("click", function () {
 					tag.remove();
 					const index = tagsArrayList.indexOf(btnTag.id.replace("btn-close-", "").split("-").join(" "));
 					if (index !== -1) {
 						tagsArrayList.splice(index, 1);
 					}
-					// Relaunch the search for recipes after deleting the tag
+					// Relancer la recherche des recettes après la suppresion du tag 
 					searchByTags();
 				});
 			}
